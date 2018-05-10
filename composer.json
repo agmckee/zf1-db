@@ -1,0 +1,32 @@
+{
+    "name": "agmckee/zf1-db",
+    "description": "Zend Framework 1 database component",
+    "type": "library",
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.7.x-dev"
+    },
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Alex McKee",
+            "email": "alex@agmckee.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "Zend_": "src/"
+        },
+        "classmap": [
+            "src/Zend/Db.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "Zend_": "tests/"
+        }
+    }
+}
