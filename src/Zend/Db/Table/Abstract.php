@@ -1600,9 +1600,9 @@ abstract class Zend_Db_Table_Abstract
         // assume the tableName is the class name
         if (!class_exists($tableName)) {
             try {
-
-                Zend_Loader::loadClass($tableName);
-            } catch (Zend_Exception $e) {
+                new $tableName;
+                //Zend_Loader::loadClass($tableName);
+            } catch (\Exception $e) {
 
                 throw new Zend_Db_Table_Row_Exception($e->getMessage(), $e->getCode(), $e);
             }
